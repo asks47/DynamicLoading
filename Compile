@@ -16,3 +16,6 @@ sudo gcc -o test test.c -ldl
 
 --compile dynamic load program
 sudo gcc -o WrapperHello WrapperHello.c -ldl
+
+--whole compile with wrapper function
+gcc -o Hello Hello.c HelloHeader.c WrapperHello.c -ldl
