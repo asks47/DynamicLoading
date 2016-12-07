@@ -6,3 +6,6 @@ gcc -shared -o Namaste.so -fPIC Namaste.c
 
 --compile main with header
 gcc -o Hello Hello.c HelloHeader.c
+
+sudo gcc -c -fPIC Pranam.c -o Pranam.o
+sudo gcc Pranam.o -shared -o Pranam.so
