@@ -13,3 +13,6 @@ sudo gcc Pranam.o -shared -o Pranam.so
 
 --to create dynamic load 
 sudo gcc -o test test.c -ldl
+
+--compile dynamic load program
+sudo gcc -o WrapperHello WrapperHello.c -ldl
