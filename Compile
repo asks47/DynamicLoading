@@ -1,1 +1,8 @@
+--To compile shared object/ SO file
+sudo gcc -c -fPIC Namaste.c -o Namaste.o
+gcc Namaste.o -shared -o Namaste.so
+--To do it in a single command line
+gcc -shared -o Namaste.so -fPIC Namaste.c
 
+--compile main with header
+gcc -o Hello Hello.c HelloHeader.c
