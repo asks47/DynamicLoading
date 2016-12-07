@@ -4,15 +4,16 @@
 #include<time.h>
 
 
-    int main(int argc, char **argv) {
+    void Hello() {
         void *handle;
         //double (*cosine)(double);
         char *error;
         char (*cosine)(char);
-     
+   
    srand(time(NULL));
 int r = rand() % 2;
 printf("%d-",r);
+
 
 if(r==0){
 
@@ -48,6 +49,7 @@ handle = dlopen ("/home/ss4/Documents/Ashwini_folder/DynamicLoading/Pranam.so", 
 
         printf ("%c\n", (*cosine)(2.0));
         dlclose(handle);
+
 
 }
 }

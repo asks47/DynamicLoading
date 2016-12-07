@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <dlfcn.h>
 
- int main(int argc, char **argv) {
+ //int main(int argc, char **argv) {
+void Hello(){
         void *handle;
         //double (*cosine)(double);
         char *error;
