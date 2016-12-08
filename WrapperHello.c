@@ -8,7 +8,7 @@ void Hello(){
         void *handle;
         //double (*cosine)(double);
         char *error;
-        char (*cosine)(char);
+        char (*HelloAddr)(char);
      
    srand(time(NULL));
 int r = rand() % 2;
@@ -22,7 +22,7 @@ if(r==0){
             exit(1);
         }
 
-        cosine = dlsym(handle, "Hello");
+        HelloAddr = dlsym(handle, "Hello");
         if ((error = dlerror()) != NULL)  {
             fputs(error, stderr);
             exit(1);
@@ -40,13 +40,13 @@ handle = dlopen ("/home/ss4/Documents/Ashwini_folder/DynamicLoading/Pranam.so", 
             exit(1);
         }
 
-        cosine = dlsym(handle, "Hello");
+        HelloAddr = dlsym(handle, "Hello");
         if ((error = dlerror()) != NULL)  {
             fputs(error, stderr);
             exit(1);
         }
 
-        printf ("%c\n", (*cosine)(2.0));
+        printf ("%c\n", (*HelloAddr)(2.0));
         dlclose(handle);
 
 }
