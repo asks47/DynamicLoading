@@ -28,7 +28,7 @@ if(r==0){
             exit(1);
         }
 
-        printf ("%c\n", (*cosine)(2.0));
+        printf ("%c\n", (*HelloAddr)(2.0));
         dlclose(handle);
     }
 
